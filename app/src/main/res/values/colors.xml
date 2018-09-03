@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="text_143551">#143551</color>
+    <color name="main_bg_kline">#181B2A</color>
+    <color name="main_bg_kline_hover">#0B0C0F</color>
+    <color name="color_font_kline">#A2A2A2</color>
+    <color name="bg_kline_bottom">#13151C</color>
+    <color name="font_kline_depth_buy">#1B9C42</color>
+    <color name="font_kline_depth_sell">#E22220</color>
+
+    <color name="color_gray">#B4B4B4</color>
+    <color name="color_green">#00b4aa</color>
+
+
+    <!-- 分割线颜色 -->
+    <color name="stroke">@color/stroke_deep</color>
+    <!-- 分割线颜色 深 -->
+    <color name="stroke_deep">#e5e5e5</color>
+    <!-- 灰色按下颜色 -->
+    <color name="gray_press">#e5e5e5</color>
+
+</resources>

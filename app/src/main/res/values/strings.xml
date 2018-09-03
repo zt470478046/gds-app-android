@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">环球卫盾</string>
+
+    <string name="text_xian_login">请先登录</string>
+    <string name="login_entity">暂无登录,点击登录</string>
+    <string name="guild_btn_go_in">点击进入</string>
+
+</resources>
