@@ -8,4 +8,15 @@ package app.gds.one.data;
 
 public interface DataSource {
 
+    void getCountry(DataCallback loadDataCallback);
+
+
+
+
+    interface DataCallback {
+
+        void onDataLoaded(Object obj);
+
+        void onDataNotAvailable(Integer code, String toastMessage);
+    }
 }

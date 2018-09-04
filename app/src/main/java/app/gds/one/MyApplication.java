@@ -7,6 +7,8 @@ import com.blankj.utilcode.util.NetworkUtils;
 import com.blankj.utilcode.util.Utils;
 import com.uuzuche.lib_zxing.activity.ZXingLibrary;
 
+import org.xutils.x;
+
 /**
  * Created by gerry on 2018/8/24.
  */
@@ -39,6 +41,7 @@ public class MyApplication extends Application {
         getDisplayMetric();
 
         checkInternet();
+        x.Ext.init(this);
     }
 
     /**

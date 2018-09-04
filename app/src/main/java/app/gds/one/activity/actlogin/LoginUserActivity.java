@@ -14,6 +14,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.blankj.utilcode.util.KeyboardUtils;
 import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.RegexUtils;
 import com.blankj.utilcode.util.ToastUtils;
@@ -29,6 +30,7 @@ import app.gds.one.entity.User;
 import app.gds.one.utils.customview.VerificationCodeView;
 import butterknife.BindView;
 import butterknife.OnClick;
+import config.Injection;
 
 /**
  * Created by gerry on 2018/8/31.
@@ -116,6 +118,7 @@ public class LoginUserActivity extends BaseActivity implements LoginUserInterfac
     @Override
     protected void initViews(Bundle savedInstanceState) {
 
+        new LoginPresenter(Injection.provideTasksRepository(getApplicationContext()), this);
 
         etPhone.addTextChangedListener(phonewatcher);
         //设置提币按钮 不可点击
@@ -190,8 +193,10 @@ public class LoginUserActivity extends BaseActivity implements LoginUserInterfac
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.tvCountry:
-
-
+                if(KeyboardUtils.isSoftInputVisible(this)){
+                    KeyboardUtils.hideSoftInput(this);
+                }
+                presenter.countryCode();
                 break;
             case R.id.ibBack:
                 /**点击返回键 关闭窗口**/

@@ -6,7 +6,18 @@ package app.gds.one;
 
 public class CloabalConstant {
 
+    //终端号
+    public static final String TERMINAL = "android";
 
+    //TOKEN失效错误码
+    public static final int TOKEN_DISABLE1 = 4000;
+    public static final int TOKEN_DISABLE2 = -1;
+    //自定义错误码
+    public static final int JSON_ERROR = -9999;
+    public static final int VOLLEY_ERROR = -9998;
+    public static final int TOAST_MESSAGE = -9997;
+    public static final int OKHTTP_ERROR = -9996;
+    public static final int NO_DATA = -9995;
 
 
     ///////////////////permission

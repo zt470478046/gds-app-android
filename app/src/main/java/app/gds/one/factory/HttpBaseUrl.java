@@ -7,8 +7,14 @@ package app.gds.one.factory;
  */
 
 public class HttpBaseUrl {
+///https://api.gds.wss.one/v1/country
+    public static final String host = "https://api.gds.wss.one";
 
-    public static final String host = "http://api.1x.hk";
+
+    /**登录注册模块相关**/
+    public static String getCountryUrl(){
+        return host+"/v1/country";
+    }
 
 
 }
