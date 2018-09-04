@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <!--标题-->
+        <LinearLayout
+            android:id="@+id/llTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/title_bar_height"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/ibBack"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:scaleType="center"
+                android:src="@mipmap/icon_back"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="16dp"
+                android:text="@string/login"
+                android:textColor="@color/text_143551"
+                android:textSize="18sp"
+                android:visibility="visible"
+                tools:text="$500" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/ibRegist"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:minWidth="48dp"
+                android:text="@string/regist"
+                android:textColor="#fff"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+        <!--登录-->
+        <LinearLayout
+            android:id="@+id/user_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="25dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="115dp"
+                android:text="@string/hint_pless_input_phone"
+                android:textColor="@color/text_main_one_bg"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="35sp"
+                android:background="#fff">
+
+                <TextView
+                    android:id="@+id/tvCountry"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:drawablePadding="6dp"
+                    android:drawableRight="@mipmap/icon_arrow_black"
+                    android:gravity="center|left"
+                    android:minHeight="32dp"
+                    android:paddingRight="8dp"
+                    android:text="+86"
+                    android:textColor="@color/text_main_one_bg"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/etPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="#fff"
+                    android:hint="@string/phone_number"
+                    android:inputType="phone"
+                    android:minHeight="24dp"
+                    android:maxLength="11"
+                    android:textColor="@color/text_main_one_bg"
+                    android:textColorHint="@color/text_hint_bg"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/stroke" />
+            <!--下一步-->
+            <LinearLayout
+                android:id="@+id/layout_login_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="25dp"
+                android:paddingBottom="25dp"
+                >
+
+                <Button
+                    android:id="@+id/password_login_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_bg_cccccc_reid5"
+                    android:gravity="center"
+                    android:text="@string/next"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--密码-->
+        <LinearLayout
+            android:id="@+id/user_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="25dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/hint_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="115dp"
+                android:text="@string/hint_pless_input_phone_password"
+                android:textColor="@color/text_main_one_bg"
+                android:textSize="25sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="35sp"
+                android:background="#fff">
+
+                <EditText
+                    android:id="@+id/phone_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:background="#fff"
+                    android:hint="@string/phone_password"
+                    android:inputType="textPassword"
+                    android:minHeight="24dp"
+                    android:textColor="@color/text_main_one_bg"
+                    android:textColorHint="@color/text_hint_bg"
+                    android:textSize="21sp" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/stroke" />
+
+            <TextView
+                android:id="@+id/forget_pas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right|center"
+                android:padding="10dp"
+                android:text="@string/hint_forgot_password"
+                android:textColor="@color/text_hint_bg"
+                android:textSize="15sp" />
+
+            <!--下一步-->
+            <LinearLayout
+                android:id="@+id/layout_forget_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="25dp"
+                android:paddingBottom="25dp"
+                >
+
+                <Button
+                    android:id="@+id/password_forget_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_bg_cccccc_reid5"
+                    android:gravity="center"
+                    android:text="@string/next"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--验证码登录-->
+        <LinearLayout
+            android:id="@+id/phonecode_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="25dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/phone_code_hint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="39dp"
+                android:text="@string/hint_pless_input_code"
+                android:textColor="@color/text_main_one_bg"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/phone_hint_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="@string/hint_pless_message_code"
+                android:textColor="@color/text_hint_bg_two"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/phone_number_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/text_hint_bg_two"
+                android:textSize="13sp"
+                tools:text="+86 186******546" />
+
+            <TextView
+                android:id="@+id/phone_hint_sixt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35sp"
+                android:text="@string/hint_pless_input_code_siex"
+                android:textColor="@color/text_hint_bg_two"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="4dp"
+                android:background="#fff">
+
+                <app.gds.one.utils.customview.VerificationCodeView
+                    android:id="@+id/six_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    app:icv_et_bg_focus="@drawable/shape_icv_et_bg_focus"
+                    app:icv_et_bg_normal="@drawable/shape_icv_et_bg_normal"
+                    app:icv_et_divider_drawable="@drawable/shape_divider_identifying"
+                    app:icv_et_number="6"
+                    app:icv_et_pwd="true"
+                    app:icv_et_pwd_radius="10dp"
+                    app:icv_et_text_color="#000000"
+                    app:icv_et_width="50dp"></app.gds.one.utils.customview.VerificationCodeView>
+
+            </LinearLayout>
+
+
+            <!--下一步-->
+            <LinearLayout
+                android:id="@+id/layout_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="25dp"
+                android:paddingBottom="25dp"
+                >
+
+                <Button
+                    android:id="@+id/password_action"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/btn_bg_cccccc_reid5"
+                    android:gravity="center"
+                    android:text="@string/next"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

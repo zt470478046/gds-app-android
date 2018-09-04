@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
-
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#FFFFFF</color>
 
     <color name="white">#FFFFFF</color>
     <color name="text_143551">#143551</color>
@@ -24,5 +23,16 @@
     <color name="stroke_deep">#e5e5e5</color>
     <!-- 灰色按下颜色 -->
     <color name="gray_press">#e5e5e5</color>
+    <!-- 分割线颜色 -->
+    <color name="text_hint_bg">#cccccc</color>
+    <!-- hint 提示颜色 -->
+    <color name="text_hint_bg_two">#999999</color>
+    <!--  Text 提示颜色色 深 -->
+    <color name="text_main_one_bg">#333333</color>
+    <!-- 允许按下颜色 -->
+    <color name="btn_can_pass">#4c4b5a</color>
+    <!-- 不允许按下颜色 -->
+    <color name="btn_can_not_pass">#cccccc</color>
+
 
 </resources>

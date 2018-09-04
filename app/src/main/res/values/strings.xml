@@ -4,5 +4,25 @@
     <string name="text_xian_login">请先登录</string>
     <string name="login_entity">暂无登录,点击登录</string>
     <string name="guild_btn_go_in">点击进入</string>
+    <string name="next">下一步</string>
+
+    <!--登录-->
+    <string name="login">登录</string>
+    <string name="regist">注册</string>
+    <string name="username">手机号/邮箱</string>
+    <string name="password">密码</string>
+    <string name="forgot_password">忘记密码？</string>
+    <string name="hint_forgot_password">忘记密码</string>
+    <string name="goto_regist">现在注册</string>
+    <string name="phone_number">请输入手机号码</string>
+    <string name="phone_password">8-16位密码</string>
+
+    <string name="hint_pless_input_phone">请输入手机号</string>
+    <string name="hint_pless_input_phone_password">请输入您的登录密码</string>
+    <string name="hint_pless_input_code">请输入验证码</string>
+    <string name="hint_pless_message_code">验证码已发送到您的手机</string>
+    <string name="hint_pless_input_code_siex">6位数字验证码</string>
+
+    <string name="input_phone_number_error">您输入的手机号有误</string>
 
 </resources>

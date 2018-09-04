@@ -15,5 +15,8 @@ public class CloabalConstant {
     public static final int PERMISSION_STORAGE = 2;
 
 
+    //////////////// btn_show
+    public static final String TOP_BACK_BTN_CANSHOW = "btn_topshow";
+
 
 }

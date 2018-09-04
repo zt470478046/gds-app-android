@@ -2,6 +2,7 @@ package app.gds.one;
 
 import android.app.Application;
 
+import com.blankj.utilcode.util.LogUtils;
 import com.blankj.utilcode.util.NetworkUtils;
 import com.blankj.utilcode.util.Utils;
 import com.uuzuche.lib_zxing.activity.ZXingLibrary;
@@ -30,6 +31,9 @@ public class MyApplication extends Application {
         app = this;
 
         Utils.init(app);
+
+        LogUtils.getConfig().setGlobalTag("MAC");
+        LogUtils.getConfig().setConsoleFilter(LogUtils.V);
         /*二维码识别*/
         ZXingLibrary.initDisplayOpinion(this);
         getDisplayMetric();

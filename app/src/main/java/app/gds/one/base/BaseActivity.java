@@ -159,6 +159,8 @@ public abstract class BaseActivity extends AppCompatActivity {
      */
     protected void initImmersionBar() {
         immersionBar = ImmersionBar.with(this);
+        immersionBar.statusBarColor(R.color.colorPrimary);
+        immersionBar.statusBarDarkFont(true,0.2f);
         immersionBar.keyboardEnable(false, WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN).init();
     }
 

@@ -43,4 +43,8 @@ dependencies {
     compile 'com.squareup.okhttp3:okhttp:3.9.0'//网络请求
 
     compile 'com.google.code.gson:gson:2.8.2' //数据处理
+    compile 'org.litepal.android:core:1.6.1'
+
+    compile 'com.github.promeg:tinypinyin:2.0.3'// 拼音相关
+
 }
