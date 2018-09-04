@@ -33,7 +33,7 @@ public interface LoginUserInterface {
         void sendCodeFail(Integer code, String toastMessage);
 
         /** 国家代码面好获取 数据处理**/
-        void countryCodeSuccess(JSONObject obj);
+        void countryCodeSuccess(Object obj);
 
         void countryCodeFail(Integer code, String toastMessage);
 

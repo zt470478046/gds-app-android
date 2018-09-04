@@ -21,6 +21,9 @@ import com.blankj.utilcode.util.ToastUtils;
 
 import org.json.JSONObject;
 
+import java.io.Serializable;
+import java.util.List;
+
 import app.gds.one.CloabalConstant;
 import app.gds.one.R;
 import app.gds.one.activity.pickcity.PickActivity;
@@ -119,7 +122,9 @@ public class LoginUserActivity extends BaseActivity implements LoginUserInterfac
     protected void initViews(Bundle savedInstanceState) {
 
         new LoginPresenter(Injection.provideTasksRepository(getApplicationContext()), this);
-
+        if(KeyboardUtils.isSoftInputVisible(this)){
+            KeyboardUtils.hideSoftInput(this);
+        }
         etPhone.addTextChangedListener(phonewatcher);
         //设置提币按钮 不可点击
         passwordLoginAction.setEnabled(false);
@@ -182,8 +187,10 @@ public class LoginUserActivity extends BaseActivity implements LoginUserInterfac
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == REQUERST_CODE && resultCode == Activity.RESULT_OK) {
+            Log.v("MAC","chengshi"+data.getStringExtra("country"));
             Country countrys = Country.fromJson(data.getStringExtra("country"));
             citycode = countrys.code;
+            Log.v("MAC",countrys.toString()+"CODE"+citycode+"NAME"+countrys.name);
             tvCountry.setText("+" + countrys.code);
         }
 
@@ -417,9 +424,17 @@ public class LoginUserActivity extends BaseActivity implements LoginUserInterfac
     }
 
     @Override
-    public void countryCodeSuccess(JSONObject obj) {
+    public void countryCodeSuccess(Object obj) {
         /**获取国家代码簿成功**/
-        startActivityForResult(new Intent(getApplicationContext(), PickActivity.class), REQUERST_CODE);
+
+        List<Country> listcountry = (List<Country>) obj;
+        Intent intent = new Intent(getApplicationContext(), PickActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("country", (Serializable) listcountry);
+        intent.putExtras(bundle);
+
+
+        startActivityForResult(intent, REQUERST_CODE);
 
     }
 

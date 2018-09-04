@@ -13,6 +13,7 @@ import org.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 import app.gds.one.data.PyEntity;
@@ -23,25 +24,21 @@ import app.gds.one.utils.PinyinUtil;
  * Created by gerry on 2018/9/4.
  */
 
-public class Country implements PyEntity {
+public class Country implements PyEntity , Serializable{
     private static final String TAG = Country.class.getSimpleName();
     public int code;
     public String name, locale, pinyin;
-    public int flag;
     private static ArrayList<Country> countries = null;
 
-    public Country(int code, String name, String locale, int flag) {
+    public Country(int code, String name) {
         this.code = code;
         this.name = name;
-        this.flag = flag;
-        this.locale = locale;
     }
 
     @Override
     public String toString() {
         return "Country{" +
                 "code='" + code + '\'' +
-                "flag='" + flag + '\'' +
                 ", name='" + name + '\'' +
                 '}';
     }
@@ -66,7 +63,7 @@ public class Country implements PyEntity {
                 if(!TextUtils.isEmpty(locale)) {
                     flag = ctx.getResources().getIdentifier("flag_" + locale.toLowerCase(), "mipmap", ctx.getPackageName());
                 }
-                countries.add(new Country(jo.getInt("code"), jo.getString(key), locale, flag));
+                countries.add(new Country(jo.getInt("code"), jo.getString(key)));
             }
 
             Log.i(TAG, countries.toString());
@@ -84,7 +81,7 @@ public class Country implements PyEntity {
         if(TextUtils.isEmpty(json)) return null;
         try {
             JSONObject jo = new JSONObject(json);
-            return new Country(jo.optInt("code") ,jo.optString("name"), jo.optString("locale"), jo.optInt("flag"));
+            return new Country(jo.optInt("code") ,jo.optString("name"));
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -92,7 +89,7 @@ public class Country implements PyEntity {
     }
 
     public String toJson(){
-        return "{\"name\":\"" + name + "\", \"code\":" + code + ", \"flag\":" + flag + ",\"locale\":\"" + locale + "\"}";
+        return "{\"name\":\"" + name + "\", \"code\":" + code + "}";
     }
 
     public static void destroy(){ countries = null; }

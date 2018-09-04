@@ -8,7 +8,7 @@ package app.gds.one.factory;
 
 public class HttpBaseUrl {
 ///https://api.gds.wss.one/v1/country
-    public static final String host = "https://api.gds.wss.one";
+    public static final String host = "https://api.gds.one";
 
 
     /**登录注册模块相关**/

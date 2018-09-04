@@ -1,6 +1,6 @@
 package app.gds.one.activity.actlogin;
 
-import org.json.JSONObject;
+import android.util.Log;
 
 import app.gds.one.data.DataSource;
 
@@ -44,7 +44,8 @@ public class LoginPresenter implements LoginUserInterface.Presenter {
             @Override
             public void onDataLoaded(Object obj) {
                 view.hideLoadingPopup();
-                view.countryCodeSuccess((JSONObject)obj);
+                Log.v("MAC",obj.toString());
+                view.countryCodeSuccess(obj);
             }
 
             @Override

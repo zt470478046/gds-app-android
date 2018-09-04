@@ -37,6 +37,11 @@
             android:configChanges="orientation|screenSize"
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="app.gds.one.activity.pickcity.PickActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
         <meta-data
             android:name="android.max_aspect"
             android:value="2.1" />

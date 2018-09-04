@@ -8,6 +8,7 @@
 
     <!--登录-->
     <string name="login">登录</string>
+    <string name="country_select">国家选择</string>
     <string name="regist">注册</string>
     <string name="username">手机号/邮箱</string>
     <string name="password">密码</string>
@@ -24,5 +25,7 @@
     <string name="hint_pless_input_code_siex">6位数字验证码</string>
 
     <string name="input_phone_number_error">您输入的手机号有误</string>
+
+
 
 </resources>

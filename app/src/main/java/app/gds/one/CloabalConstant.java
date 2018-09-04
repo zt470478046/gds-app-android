@@ -30,4 +30,12 @@ public class CloabalConstant {
     public static final String TOP_BACK_BTN_CANSHOW = "btn_topshow";
 
 
+
+
+
+
+
+    ///错误提示汇总
+    public static final String ERROR_TOAST_MESSAGE = "获取数据失败，请重试";
+    public static final String ERROR_TOAST_NETWORK = "当前网络环境不佳，请稍后重试";
 }
