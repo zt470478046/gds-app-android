@@ -13,7 +13,7 @@ public class TextActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        findViewById(R.id.update).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.updata).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 

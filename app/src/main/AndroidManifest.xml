@@ -3,51 +3,55 @@
     package="app.gds.one">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.INTERNET"/>
-
+    <uses-permission android:name="android.permission.INTERNET" />
+    <meta-data android:name="design_width" android:value="1080"></meta-data>
+    <meta-data android:name="design_height" android:value="1920"></meta-data>
     <application
-        android:name="app.gds.one.MyApplication"
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:resizeableActivity="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:resizeableActivity="true"
         android:theme="@style/AppTheme">
-        <activity android:name="app.gds.one.activity.actstart.StartActivity">
+        <activity android:name=".activity.actstart.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.actstart.LeadActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.acthome.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.actlogin.LoginUserActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.pickcity.PickActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
 
-        <activity
-            android:name="app.gds.one.activity.actstart.LeadActivity"
-            android:configChanges="orientation|screenSize"
-            android:screenOrientation="portrait" />
-
-        <activity
-            android:name="app.gds.one.activity.acthome.MainActivity"
-            android:configChanges="orientation|screenSize"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="app.gds.one.activity.actlogin.LoginUserActivity"
-            android:configChanges="orientation|screenSize"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="app.gds.one.activity.pickcity.PickActivity"
-            android:configChanges="orientation|screenSize"
-            android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
         <meta-data
             android:name="android.max_aspect"
             android:value="2.1" />
 
-
-
+        <activity android:name=".activity.acthome.HeaderActivity" />
+        <activity android:name=".activity.acthome.TripActivity" />
+        <activity android:name=".activity.acthome.SetUpActivity" />
+        <activity android:name=".activity.acthome.PersonalpageActivity" />
+        <activity android:name=".activity.acthome.WalletActivity" />
+        <activity android:name=".activity.acthome.CustomerServiceActivity"></activity>
     </application>
 
 </manifest>

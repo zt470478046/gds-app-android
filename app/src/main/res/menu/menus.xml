@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single">
+        <item android:id="@+id/Trip_mine"
+            android:title="行程"
+            android:checkable="false"
+            android:icon="@drawable/icon_formation"></item>
+        <item android:id="@+id/wallet_mine"
+            android:title="钱包"
+            android:checkable="false"
+            android:icon="@drawable/icon_wallet"
+            android:menuCategory="container"></item>
+        <item android:id="@+id/Customer_mine"
+            android:title="客服"
+            android:icon="@drawable/icon_cservice"
+            android:checkable="false"></item>
+        <item android:id="@+id/Setup_mine"
+            android:title="设置"
+            android:icon="@drawable/icon_setting"
+            android:checkable="false"></item>
+        <item android:id="@+id/Enterprise_mine"
+            android:title="企业端"
+            android:icon="@drawable/icon_formation"
+            android:checkable="false"></item>
+    </group>
+</menu>
