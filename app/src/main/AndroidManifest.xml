@@ -33,10 +33,26 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait" />
         <activity
-            android:name="app.gds.one.activity.actlogin.LoginUserActivity"
+            android:name="app.gds.one.activity.actlogin.phonecheck.LoginUserActivity"
             android:configChanges="orientation|screenSize"
             android:launchMode="singleTask"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            />
+        <activity
+            android:name="app.gds.one.activity.actlogin.sendcodepage.SendCodeActivity"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            />
+        <activity
+            android:name="app.gds.one.activity.actlogin.passloginpage.PasLoginPage"
+            android:configChanges="orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            />
         <activity
             android:name="app.gds.one.activity.pickcity.PickActivity"
             android:configChanges="orientation|screenSize"

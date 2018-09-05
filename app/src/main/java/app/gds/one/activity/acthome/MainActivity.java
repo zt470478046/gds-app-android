@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import app.gds.one.R;
-import app.gds.one.activity.actlogin.LoginUserActivity;
+import app.gds.one.activity.actlogin.phonecheck.LoginUserActivity;
 import app.gds.one.base.BaseActivity;
 import butterknife.BindView;
 
