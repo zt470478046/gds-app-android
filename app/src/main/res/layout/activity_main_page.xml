@@ -1,36 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.zhy.autolayout.AutoLinearLayout
-    android:id="@+id/drawer_layout"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context="app.gds.one.activity.acthome.MainActivity">
+
     <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        ></android.support.v4.widget.DrawerLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-        <Button
-            android:id="@+id/btn"
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="测试" />
-    </LinearLayout>
-    <android.support.design.widget.NavigationView
-        android:clickable="true"
-        android:id="@+id/navi_view"
-        android:layout_width="435px"
-        android:layout_height="match_parent"
-        android:layout_gravity="left"
-        android:fitsSystemWindows="true"
-        app:menu="@menu/menus">
-        <include layout="@layout/activity_mine_foot" />
-    </android.support.design.widget.NavigationView>
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="测试" />
+        </LinearLayout>
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navi_view"
+            android:layout_width="435px"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:clickable="true"
+            android:fitsSystemWindows="true"
+            app:menu="@menu/menus">
+            <include layout="@layout/activity_mine_foot" />
+        </android.support.design.widget.NavigationView>
+    </android.support.v4.widget.DrawerLayout>
 </com.zhy.autolayout.AutoLinearLayout>
