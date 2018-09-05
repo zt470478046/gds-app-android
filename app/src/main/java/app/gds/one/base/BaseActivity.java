@@ -18,7 +18,6 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 import com.gyf.barlibrary.ImmersionBar;
-import com.zhy.autolayout.AutoLayoutActivity;
 
 import java.util.List;
 import java.util.Locale;
@@ -34,7 +33,7 @@ import butterknife.Unbinder;
  * Created by gerry on 2018/8/28.
  */
 
-public abstract class BaseActivity extends AutoLayoutActivity {
+public abstract class BaseActivity extends AppCompatActivity {
     private PopupWindow loadingPopup;
     protected View permissionView; //权限
     protected View notLoginView;//未登录展示

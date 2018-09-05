@@ -10,8 +10,17 @@ public interface DataSource {
 
     void getCountry(DataCallback loadDataCallback);
 
+    void checkPhone(String country , String phone ,DataCallback loadDataCallback);
 
+    void sendCode(int country , String telephone ,DataCallback loadDataCallback);
 
+    void userRegist(int country , String phone ,String code, DataCallback loadDataCallback);
+
+    void setPassword(int country,String phone ,String password ,String token ,DataCallback loadDataCallback);
+
+    void codeVerify(int country , String phone ,String code, DataCallback loadDataCallback);
+
+    void userLogin (int country,String phone ,String password,DataCallback loadDataCallback);
 
     interface DataCallback {
 

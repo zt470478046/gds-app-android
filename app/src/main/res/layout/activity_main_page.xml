@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.zhy.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -26,7 +26,7 @@
 
         <android.support.design.widget.NavigationView
             android:id="@+id/navi_view"
-            android:layout_width="435px"
+            android:layout_width="217dp"
             android:layout_height="match_parent"
             android:layout_gravity="left"
             android:clickable="true"
@@ -35,4 +35,4 @@
             <include layout="@layout/activity_mine_foot" />
         </android.support.design.widget.NavigationView>
     </android.support.v4.widget.DrawerLayout>
-</com.zhy.autolayout.AutoLinearLayout>
+</LinearLayout>

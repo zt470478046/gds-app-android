@@ -5,7 +5,7 @@
     <string name="login_entity">暂无登录,点击登录</string>
     <string name="guild_btn_go_in">点击进入</string>
     <string name="next">下一步</string>
-
+    <string name="ok">确定</string>
     <!--登录-->
     <string name="login">登录</string>
     <string name="country_select">国家选择</string>
@@ -26,5 +26,7 @@
 
     <string name="input_phone_number_error">您输入的手机号有误</string>
 
+    <string name="send_code">获取验证码</string>
+    <string name="re_send">重新获取</string>
 
 </resources>

@@ -1,6 +1,5 @@
 package app.gds.one.activity.acthome;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,7 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import app.gds.one.R;
-import app.gds.one.activity.actlogin.LoginUserActivity;
+import app.gds.one.activity.actlogin.phonecheck.LoginUserActivity;
 import app.gds.one.base.BaseActivity;
 import butterknife.BindView;
 
